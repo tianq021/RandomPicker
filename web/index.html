@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机点名系统</title>
+    <link rel="stylesheet" href="/web/style.css">
+</head>
+<body>
+    <main>
+        <section class="panel">
+            <h1>随机点名系统</h1>
+            <p class="desc">输入名单，设置抽取人数和分隔方式，系统会随机返回不重复的名字。</p>
+
+            <label for="names">名单</label>
+            <textarea id="names" placeholder="例如：张三、李四、王五&#10;也可以用逗号、空格、分号或自定义符号分隔"></textarea>
+
+            <div class="grid">
+                <div>
+                    <label for="count">抽取人数</label>
+                    <input id="count" type="number" min="1" value="1">
+                </div>
+
+                <div>
+                    <label for="splitMode">名单分隔符</label>
+                    <select id="splitMode">
+                        <option value="auto">自动识别</option>
+                        <option value="newline">换行</option>
+                        <option value="comma">逗号</option>
+                        <option value="space">空格</option>
+                        <option value="semicolon">分号</option>
+                        <option value="custom">自定义</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="customSplit">自定义分隔符</label>
+                    <input id="customSplit" placeholder="例如：|" disabled>
+                </div>
+
+                <div>
+                    <label for="outputSeparator">结果分隔符</label>
+                    <select id="outputSeparator">
+                        <option value="、">顿号：、</option>
+                        <option value=", ">逗号：,</option>
+                        <option value=" ">空格</option>
+                        <option value=" / ">斜杠：/</option>
+                        <option value="&#10;">换行</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button id="pickButton" type="button">开始随机</button>
+                <span class="hint">抽取结果会追加保存到 output/result.txt</span>
+            </div>
+
+            <div class="result">
+                <div class="result-title">抽取结果</div>
+                <div class="result-names" id="result">等待抽取</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/web/app.js"></script>
+</body>
+</html>

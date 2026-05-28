@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, "Microsoft YaHei", sans-serif;
+    background: #eef2f7;
+    color: #172033;
+}
+
+main {
+    width: min(960px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.panel {
+    background: #ffffff;
+    border: 1px solid #dde4ef;
+    border-radius: 8px;
+    box-shadow: 0 12px 32px rgba(22, 34, 51, 0.08);
+    padding: 28px;
+}
+
+h1 {
+    margin: 0 0 8px;
+    font-size: 30px;
+}
+
+.desc {
+    margin: 0 0 24px;
+    color: #637083;
+    line-height: 1.6;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+textarea,
+input,
+select {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 11px 12px;
+    font: inherit;
+    color: #172033;
+    background: #ffffff;
+}
+
+textarea {
+    min-height: 220px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 18px 0;
+}
+
+button {
+    min-height: 46px;
+    border: 0;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0 22px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button:disabled {
+    cursor: wait;
+    background: #94a3b8;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.result {
+    margin-top: 24px;
+    padding: 18px;
+    border-radius: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    min-height: 88px;
+}
+
+.result-title {
+    color: #637083;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.result-names {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.5;
+    word-break: break-word;
+    white-space: pre-line;
+}
+
+.message {
+    color: #b42318;
+    font-weight: 700;
+}
+
+.hint {
+    margin-top: 8px;
+    color: #637083;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+@media (max-width: 720px) {
+    main {
+        padding: 20px 0;
+    }
+
+    .panel {
+        padding: 20px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
