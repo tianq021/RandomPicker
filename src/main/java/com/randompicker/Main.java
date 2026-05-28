@@ -1,3 +1,7 @@
+package com.randompicker;
+
+import com.randompicker.server.RandomPickerServer;
+
 import java.io.IOException;
 import java.nio.file.Paths;
 

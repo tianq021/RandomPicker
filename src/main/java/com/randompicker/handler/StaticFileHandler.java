@@ -1,3 +1,7 @@
+package com.randompicker.handler;
+
+import com.randompicker.util.ContentTypes;
+import com.randompicker.util.HttpResponses;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 

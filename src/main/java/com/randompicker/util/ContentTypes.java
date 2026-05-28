@@ -1,3 +1,5 @@
+package com.randompicker.util;
+
 import java.nio.file.Path;
 
 public class ContentTypes {

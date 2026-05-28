@@ -1,3 +1,9 @@
+package com.randompicker.server;
+
+import com.randompicker.handler.PickHandler;
+import com.randompicker.handler.StaticFileHandler;
+import com.randompicker.repository.ResultRepository;
+import com.randompicker.service.NamePickerService;
 import com.sun.net.httpserver.HttpServer;
 
 import java.io.IOException;
